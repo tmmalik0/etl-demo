@@ -1,7 +1,6 @@
 <?php
-	include_once( dirname( $_SERVER['DOCUMENT_ROOT'] ) . '/inc/autoloader.php' );
+	include_once( dirname( dirname( $_SERVER['DOCUMENT_ROOT'] ) ) . '/inc/autoloader.php' );
 	$user = new cUser();
-	$user -> sec_session_start();
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -18,8 +17,6 @@
 	$currentPage = 'Data';
 ?>
   <body>
-  	<?php
-  	if ($user -> login_check() == true) : ?>
 
     <!-- Wrapper Start -->
 		<div class="wrapper">
@@ -182,10 +179,5 @@
   	<script type="text/JavaScript" src="/assets/lib/bootstrap.min.js"></script>
   	<script type="text/JavaScript" src="/assets/lib/counter.js"></script>
 
-    <?php else : ?>
-    <p>
-      <span class="error">Sie sind nicht berechtigt auf diese Seite zugreifen zu können.</span> Bitte <a href="/login.php">einloggen</a>.
-    </p>
-   <?php endif; ?>
   </body>
 </html>

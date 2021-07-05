@@ -299,27 +299,6 @@ $(document).ready(function() {
         tables.push('kurse');
       }
 
-      // get the table from the filename
-      // if (fileName.includes('Zinskurven')) {
-      //   table = 'zsk';
-      // } else if (fileName.includes('Spreadkurven')) {
-      //   table = 'spreads';
-      // } else if (fileName.includes('Fxspots') || fileName.includes('Fxfwdpoints')) {
-      //   table = 'devisen';
-      // } else if (fileName.includes('Swaps')) {
-      //   table = 'swaps';
-      // } else {
-      //   //if no table can be found, give out an error
-      //   $("#mappingError").addClass("error");
-  		// 	$("#mappingError").addClass("display-block");
-  		// 	$("#mappingError").html("Eine Tabelle konnte nich zugeordnet werden. Stellen Sie sicher, dass die Datei folgende Namen enthält:<br><b>Zinskurven, Spreadkurven, fxSpots, fxfwdPoints, WP oder Swaps</b>.<br>Gehen Sie zurück zum Tab 'Datei und laden Sie erneut hoch.'")
-      //   $("#saveMapping").hide();
-      //   $("#navigateToSummary").hide();
-      //   $("#saveETLSettings").hide();
-      // $("#addNewField").hide();
-      // $("#showDBFields").hide();
-      // }
-
       // only make a POST Request, if a table can be found in the filename
       if (table) {
         $("#mappingError").html('');

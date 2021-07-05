@@ -1,5 +1,6 @@
 <?php
-	include_once( $_SERVER['DOCUMENT_ROOT'] . '/php/process.php');
+	include_once( dirname( dirname( $_SERVER['DOCUMENT_ROOT'] ) ) . '/inc/autoloader.php');
+	$user = new cUser();
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -12,7 +13,7 @@
   * @brief ETL Settings
   */
 	$_SESSION['title'] = 'ETL Settings';
-	include($_SERVER['DOCUMENT_ROOT'] . '/php/head.php');
+	include( $_SERVER['DOCUMENT_ROOT'] . '/php/head.php' );
 	$currentPage = 'ETL Settings';
 	$url = '/php/downloadTemplate.php';
 ?>
@@ -37,8 +38,10 @@
 						<div class="col-sm-3">
 							<button type="button" name="addETL" id="addETL" class="btn btn-primary btn-xs">Neuer ETL Filter</button>
 						</div>
-						<div class="col-sm-3">
-							<a href='<?php echo $url ?>' target='__blank'><i class="fa fa-file-excel-o"></i> Vorlage herunterladen</a>
+						<div class="col-sm-4">
+							<button type="button" id="downloadTemplate" class="btn btn-primary btn-xs">
+								<a href='<?php echo $url ?>' target='__blank'><i class="fa fa-file-excel-o"></i> Vorlage herunterladen</a>
+							</button>
 						</div>
 						<div class="col-sm-1 ml-auto">
 							<button type="button" id="cancel" class="btn btn-primary btn-xs" style="display: none;"><i class="fa fa-window-close" aria-hidden="true"></i></button>

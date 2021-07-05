@@ -1262,9 +1262,9 @@ class Connector {
             throw new Exception( "No config file found!", 1001 );
           }
 
-          require( dirname( $_SERVER['DOCUMENT_ROOT'] ) . '/inc/settings.config.php' );
+          require( dirname( dirname( $_SERVER['DOCUMENT_ROOT'] ) ) . '/inc/settings.config.php' );
 
-          $this->dbc = $databaseConfig;
+          $this->dbc = $databaseETLConfig;
 
             // Verbindung herstellen
             $dsn = "" .

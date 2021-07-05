@@ -11,7 +11,11 @@
   $user = new cUser();
 
   if ( isset( $_POST ) ) {
+    if ( isset( $_POST['processType'] ) ) {
       $processType = $_POST['processType'];
+    } else {
+      $processType = '';
+    }
 
       switch ( $processType ) {
       case "login":

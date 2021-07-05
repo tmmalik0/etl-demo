@@ -12,6 +12,10 @@
       <li>
         <a href="/index.php">ETL Settings</a>
       </li>
+
+      <li>
+        <a href="/data.php">Data</a>
+      </li>
     </ul>
 </div>
 <!-- /#sidebar-wrapper -->
