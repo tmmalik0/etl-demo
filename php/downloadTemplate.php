@@ -7,7 +7,7 @@
 * @brief PHP File to download the template for prices saved in the database
 */
   // Initialize a file URL to the variable
-  $path = $_SERVER['DOCUMENT_ROOT'] . '/files/Musterdatei.xlsx';
+  $path = $_SERVER['DOCUMENT_ROOT'] . '/files/Vorlage.xlsx';
 
   // Use basename() function to return the base name of file
   // $file_name = basename( $url );

@@ -26,11 +26,13 @@
   <script type="text/javascript" src="/assets/lib/buttons.html5.min.js"></script>
   <script type="text/javascript" src="/assets/lib/jszip.min.js"></script>
   <script type="text/javascript" src="/assets/lib/jquery-ui.js"></script>
+  <script type="text/javascript" src="/assets/js/process.js"></script>
 
   <!-- Individual Scripts -->
-
-  <script src="/assets/lib/sortable.js"></script>
-  <script src="/assets/js/processETLEinstellung.js"></script>
+  <?php if ($_SESSION['title'] === 'ETL Settings') { ?>
+    <script src="/assets/lib/sortable.js"></script>
+    <script src="/assets/js/processETLEinstellung.js"></script>
+  <?php } ?>
 
   <?php if ($_SESSION['title'] === 'Data Warehouse') { ?>
     <script src="/assets/js/processDataWarehouse.js"></script>

@@ -30,7 +30,7 @@ $(document).ready(function() {
   	},
   	"columnDefs":[
   		{
-  			"targets":[0, 12, 13],
+  			"targets":[0, 8, 9],
   			"orderable":true,
   		},
   	],
@@ -101,9 +101,8 @@ $(document).ready(function() {
 			dataType:"json",
 			success:function(data) {
 				$('#id').val(data[0].id);
-				$('#base').val(data[0].base);
-				$('#quote').val(data[0].quote);
-				$('#spot').val(data[0].spot);
+				$('#text').val(data[0].text);
+				$('#dezimal').val(data[0].dezimal);
 				$('#datum').val(data[0].datum);
 				$('#kurs_quelle').val(data[0].kurs_quelle);
 				$('#filename').val(data[0].filename);

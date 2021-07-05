@@ -1,6 +1,7 @@
 <?php
 	include_once( dirname( dirname( $_SERVER['DOCUMENT_ROOT'] ) ) . '/inc/autoloader.php' );
 	$user = new cUser();
+	$user -> sec_session_start();
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -88,27 +89,21 @@
 								<input type="hidden" name="processType" id="processType" value="devisen"/>
 								<div class="modal-content-full-width modal-content">
 									<div class="modal-header-full-width modal-header">
-										<h4 class="modal-title"><i class="fa fa-plus"></i> Devisen editieren</h4>
+										<h4 class="modal-title"><i class="fa fa-plus"></i> Data editieren</h4>
 									</div>
 									<div class="modal-body">
 
 										<div class="row">
 											<div class="col-sm-3">
 												<div class="form-group">
-													<label for="base" class="control-label">base</label>
-													<input type="text" class="form-control" id="base" name="base">
+													<label for="text" class="control-label">text</label>
+													<input type="text" class="form-control" id="text" name="text">
 												</div>
 											</div>
 											<div class="col-sm-3">
 												<div class="form-group">
-													<label for="quote" class="control-label">quote</label>
-													<input type="text" class="form-control" id="quote" name="quote">
-												</div>
-											</div>
-											<div class="col-sm-3">
-												<div class="form-group">
-													<label for="spot" class="control-label">spot</label>
-													<input type="text" class="form-control" id="spot" name="spot">
+													<label for="dezimal" class="control-label">dezimal</label>
+													<input type="text" class="form-control" id="dezimal" name="dezimal">
 												</div>
 											</div>
 											<div class="col-sm-3">
@@ -120,12 +115,6 @@
 										</div>
 
 										<div class="row">
-											<div class="col-sm-3">
-												<div class="form-group">
-													<label for="kurs_quelle" class="control-label">kurs_quelle</label>
-													<input type="text" class="form-control" id="kurs_quelle" name="kurs_quelle">
-												</div>
-											</div>
 											<div class="col-sm-3">
 												<div class="form-group">
 													<label for="filename" class="control-label">filename</label>
@@ -140,9 +129,6 @@
 											</div>
 											<div class="col-sm-3 mr-6">
 												<div class="form-group">
-													<!-- <label for="status" class="control-label">status</label>
-													<input type="text" class="form-control" id="status" name="status"> -->
-
 													<label for="status">status:</label>
 	 												<select class="form-control" id="status" name="status">
 	 													 <option value="aktiv">aktiv</option>

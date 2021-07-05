@@ -35,7 +35,7 @@ $(document).ready(function() {
   	},
   	"columnDefs":[
   		{
-  			"targets":[0, 6, 7],
+  			"targets":[0, 5, 6],
   			"orderable":true,
   		},
   	],
@@ -243,15 +243,6 @@ $(document).ready(function() {
 			return response;
 		}
 
-    // var patternCheck = regexFilenamePatternCheck(fileName);
-    // if (!patternCheck) {
-    //   $("#response").addClass("error");
-		// 	$("#response").addClass("display-block");
-		// 	$("#response").html("Ungültiges Pattern. Ein gültiges Pattern ist im folgenden Format: <b>yymmdd_Market_Data_*</b> oder <b>yymmdd_Master_Data_*</b>");
-    //   response = false;
-    //   return response;
-    // }
-
     response = true;
 
     if (response) {
@@ -314,7 +305,6 @@ $(document).ready(function() {
           data: { processType:processType, action:'getDBHeaders', tables:tables },
           dataType: "json",
           success: function(data) {
-            console.log(data);
             getDatabaseHeaders(data); // create mapping table
           }
         })

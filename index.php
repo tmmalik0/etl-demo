@@ -1,6 +1,7 @@
 <?php
 	include_once( dirname( dirname( $_SERVER['DOCUMENT_ROOT'] ) ) . '/inc/autoloader.php');
 	$user = new cUser();
+	$user -> sec_session_start();
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -119,7 +120,7 @@
 													<div class="form-group">
 														<label for="dbTable">Tabelle:</label>
 														<select class="form-control" id="dbTable_0" name="dbTable_0">
-															<option value="mustertabelle">Mustertabelle</option>
+															<option value="data">Data</option>
 														</select>
 													</div>
 												</div>

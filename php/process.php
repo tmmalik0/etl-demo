@@ -3,19 +3,18 @@
   * @file process.php
   * @author Tahir M. Malik
   * @date 05 Jul 2021
-  * @copyright 2022 Tahir M. Malik
+  * @copyright 2021 Tahir M. Malik
   * @brief Genereschiches PHP Script um verschiedene Prozesse zu verarbeiten
   */
   require_once( dirname( dirname( $_SERVER['DOCUMENT_ROOT'] ) ) . '/inc/autoloader.php' );
   include( $_SERVER['DOCUMENT_ROOT'] . '/php/Connector.php' );
   $user = new cUser();
+  $user -> sec_session_start();
+
+  // print("<pre>".print_r($_POST,true)."</pre>");
 
   if ( isset( $_POST ) ) {
-    if ( isset( $_POST['processType'] ) ) {
       $processType = $_POST['processType'];
-    } else {
-      $processType = '';
-    }
 
       switch ( $processType ) {
       case "login":
@@ -57,7 +56,7 @@
         displayData( 'spreads' );
       break;
       case "listDevisen":
-        displayData( 'devisen' );
+        displayData( 'data' );
       break;
       case "listKurse":
         displayData( 'kurse' );

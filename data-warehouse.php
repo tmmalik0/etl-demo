@@ -1,6 +1,7 @@
 <?php
 	include_once( dirname( dirname( $_SERVER['DOCUMENT_ROOT'] ) ) . '/inc/autoloader.php');
 	$user = new cUser();
+	$user -> sec_session_start();
 ?>
 <!DOCTYPE html>
 <html lang="de">
