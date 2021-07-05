@@ -38,4 +38,8 @@
       <script src="/assets/js/processDataWarehouse.js"></script>
     <?php } ?>
 
+    <?php if ($_SESSION['title'] === 'Data') { ?>
+      <script src="/assets/js/processData.js"></script>
+    <?php } ?>
+
 </head>

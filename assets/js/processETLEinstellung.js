@@ -1,8 +1,8 @@
 /**
 * @file processETL.js
-* @author Tahir M. Zafar
-* @date 11 Feb 2020
-* @copyright 2020 Tahir M. Zafar
+* @author Tahir M. Malik
+* @date 05 Jul 2021
+* @copyright 2021 Tahir M. Malik
 * @brief ETL Relevant Process to create settings for a customer/file
 */
 let fileMappingList = []; // field names (headers) from the csv (currrently)
@@ -35,7 +35,7 @@ $(document).ready(function() {
   	},
   	"columnDefs":[
   		{
-  			"targets":[0, 7, 8],
+  			"targets":[0, 6, 7],
   			"orderable":true,
   		},
   	],

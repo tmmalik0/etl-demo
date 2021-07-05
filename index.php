@@ -14,6 +14,7 @@
 	$_SESSION['title'] = 'ETL Settings';
 	include($_SERVER['DOCUMENT_ROOT'] . '/php/head.php');
 	$currentPage = 'ETL Settings';
+	$url = '/php/downloadTemplate.php';
 ?>
 
   <body>
@@ -35,6 +36,9 @@
 					<div class="row">
 						<div class="col-sm-3">
 							<button type="button" name="addETL" id="addETL" class="btn btn-primary btn-xs">Neuer ETL Filter</button>
+						</div>
+						<div class="col-sm-3">
+							<a href='<?php echo $url ?>' target='__blank'><i class="fa fa-file-excel-o"></i> Vorlage herunterladen</a>
 						</div>
 						<div class="col-sm-1 ml-auto">
 							<button type="button" id="cancel" class="btn btn-primary btn-xs" style="display: none;"><i class="fa fa-window-close" aria-hidden="true"></i></button>
@@ -93,7 +97,7 @@
 												<div class="col-sm-3">
 													<div class="form-group">
 														<label for="kunde">Kunde:</label>
-														<input type="text" class="form-control" id="kunde" name="kunde" value="QuantVS">
+														<input type="text" class="form-control" id="kunde" name="kunde" value="Test">
 													</div>
 												</div>
 												<div class="col-sm-2" id="headerRow">
@@ -105,51 +109,17 @@
 													<input type="number" class="form-control" id="startRow" name="startRow_0" min="1" value="1">
 												</div>
 												<div class="col-sm-2" id="tabsRow">
-													<label for="header">Anzahl Lachen:</label>
+													<label for="header">Anzahl Tabs:</label>
 													<input type="number" class="form-control" id="tabs" name="tabs" min="1" value="1">
 												</div>
 												<div class="col-sm-2">
 													<div class="form-group">
 														<label for="dbTable">Tabelle:</label>
 														<select class="form-control" id="dbTable_0" name="dbTable_0">
-															<option value="swaps">Swaps</option>
-															<option value="zsk">Zinskurven</option>
-															<option value="spreads">Spreads</option>
-															<option value="devisen">Devisen</option>
-															<option value="EQSWAPS">EQSWAPS</option>
-															<option value="EQSWAPE16X">EQSWAPE16X</option>
-															<option value="EQSWAPE18MDX">EQSWAPE18MDX</option>
-															<option value="EQSWAPE20MDX">EQSWAPE20MDX</option>
-															<option value="EQSWAPE35AX">EQSWAPE35AX</option>
-															<option value="EQSWAPE37X">EQSWAPE37X</option>
-															<option value="EQSWAPE40X">EQSWAPE40X</option>
-															<option value="qvs_bonds_staticData">Wertpapiere</option>
-															<option value="kurse">Kurse</option>
+															<option value="mustertabelle">Mustertabelle</option>
 														</select>
 													</div>
 												</div>
-												<div class="col-sm-1">
-													<div class="custom-control custom-checkbox kurse-control">
-												    <input type="checkbox" class="custom-control-input" id="kurseCheck_0">
-												    <label class="custom-control-label" for="kurseCheck_0">Kurse</label>
-													</div>
-												</div>
-											</div>
-
-											<div class="row">
-												<div class="col-sm-3">
-													<div class="form-group">
-														<label for="isin">ISIN:</label>
-														<input type="text" class="form-control" id="isin" name="isin">
-													</div>
-												</div>
-												<div class="col-sm-3">
-													<div class="form-group">
-														<label for="currency">Währung:</label>
-														<input type="text" class="form-control" id="currency" name="currency">
-													</div>
-												</div>
-												<div class="col-sm-6"></div>
 											</div>
 
 											<div id="multipleTabs"></div>
@@ -344,8 +314,7 @@
 										<th>Tabelle</th>
 										<th>Header</th>
 										<th>Start-Zeile</th>
-										<th>Lache</th>
-										<th>Kurse</th>
+										<th>Tabs</th>
 										<th></th>
 										<th></th>
 									</tr>
